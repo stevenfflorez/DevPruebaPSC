@@ -40,5 +40,14 @@ namespace DevPruebaPSC.Models
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_VehXVendedor_Result>("sp_VehXVendedor", cedulaParameter);
         }
+    
+        public virtual ObjectResult<sp_VehXVendedor_Result> sp_VehXVendedorFIN(string cedula)
+        {
+            var cedulaParameter = cedula != null ?
+                new ObjectParameter("cedula", cedula) :
+                new ObjectParameter("cedula", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_VehXVendedor_Result>("sp_VehXVendedorFIN", cedulaParameter);
+        }
     }
 }

@@ -1,0 +1,33 @@
+﻿body {
+    background: #f4f7f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card-menu {
+    transition: 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    padding: 40px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 250px;
+}
+    .card-menu:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        background: #007bff;
+        color: white;
+    }
+
+.container-cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center !important;
+}

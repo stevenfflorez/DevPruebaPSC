@@ -203,6 +203,9 @@
           <FunctionImport Name="sp_VehXVendedor" ReturnType="Collection(pruebaDevModel.sp_VehXVendedor_Result)">
             <Parameter Name="cedula" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="sp_VehXVendedorFIN" ReturnType="Collection(pruebaDevModel.sp_VehXVendedor_Result)">
+            <Parameter Name="cedula" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="sp_VehXVendedor_Result">
           <Property Type="Int32" Name="ventaId" Nullable="false" />
@@ -261,6 +264,19 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="sp_VehXVendedor" FunctionName="pruebaDevModel.Store.sp_VehXVendedor">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="pruebaDevModel.sp_VehXVendedor_Result">
+                <ScalarProperty Name="ventaId" ColumnName="ventaId" />
+                <ScalarProperty Name="fechaVenta" ColumnName="fechaVenta" />
+                <ScalarProperty Name="vehiculoId" ColumnName="vehiculoId" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="modelo" ColumnName="modelo" />
+                <ScalarProperty Name="anio" ColumnName="anio" />
+                <ScalarProperty Name="precio" ColumnName="precio" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_VehXVendedorFIN" FunctionName="pruebaDevModel.Store.sp_VehXVendedor">
             <ResultMapping>
               <ComplexTypeMapping TypeName="pruebaDevModel.sp_VehXVendedor_Result">
                 <ScalarProperty Name="ventaId" ColumnName="ventaId" />

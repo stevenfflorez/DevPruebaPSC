@@ -1,33 +1,31 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Inicio - PSC Prueba";
+    Layout = null;
 }
 
-<main>
-    <section class="row" aria-labelledby="aspnetTitle">
-        <h1 id="title">ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
-    </section>
-
-    <div class="row">
-        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-            <h2 id="gettingStartedTitle">Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="librariesTitle">
-            <h2 id="librariesTitle">Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="hostingTitle">
-            <h2 id="hostingTitle">Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-        </section>
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Styles/styleIndex.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container text-center">
+        <h1 class="mb-5">Bienvenido al Portal de Servicios Compartidos</h1>
+        <div class="container-cards">
+            <a href="@Url.Action("Sellers", "Vendedores")" class="card-menu">
+                <h3>Vendedores</h3>
+                <p>Gestionar personal</p>
+            </a>
+            <a href="@Url.Action("Sales", "Ventas")" class="card-menu">
+                <h3>Ventas</h3>
+                <p>Consultar y eliminar</p>
+            </a>
+            <a href="@Url.Action("Brand", "Marcas")" class="card-menu">
+                <h3>Marcas</h3>
+                <p>Configurar marcas y vehículos</p>
+            </a>
+        </div>
     </div>
-</main>
+</body>
+</html>
